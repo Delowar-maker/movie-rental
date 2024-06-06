@@ -1,3 +1,4 @@
+import { getImgUrl } from "../utils/cine.utility";
 
 
 export default function MovieDetailsModal({ movie, onClose }) {
@@ -13,8 +14,8 @@ export default function MovieDetailsModal({ movie, onClose }) {
                 >
                     <img
                         className="sm:order-2 w-full object-cover h-full max-sm:max-h-[300px]"
-                        src="./assets/movie-1.png"
-                        alt=""
+                        src={getImgUrl(movie.cover)}
+                        alt={movie.title}
                     />
                     <div className="p-5 lg:p-11">
                         <div className="">
