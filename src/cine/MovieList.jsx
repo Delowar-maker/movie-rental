@@ -1,4 +1,5 @@
 import { getAllMovies } from "../data/movies";
+import { getImgUrl } from "../utils/cine.utility";
 
 export default function MovieList() {
   const movies = getAllMovies();
@@ -12,8 +13,8 @@ export default function MovieList() {
           >
             <img
               className="w-full object-cover"
-              src="./assets/movie-1.png"
-              alt=""
+              src={getImgUrl(movie.cover)}
+              alt={movie.title}
             />
             <figcaption className="pt-4">
               <h3 className="text-xl mb-1">{movie.title}</h3>
